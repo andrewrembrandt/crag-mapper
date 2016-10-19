@@ -2,9 +2,9 @@ name:= "crag-mapper"
 version:= "0.1"
 scalaVersion:= "2.11.8"
 
-//resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
-//libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
-//
+resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
+
 //resolvers += Resolver.jcenterRepo
 //libraryDependencies += "com.hazelcast" %% "hazelcast-scala" % "latest-integration" withSources()
 //

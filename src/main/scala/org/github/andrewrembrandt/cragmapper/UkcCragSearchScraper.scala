@@ -10,12 +10,11 @@ import scala.util.matching.Regex
 
 
 case class Crag (name: String, ukcCragId: Int, climbs: List[Climb])
-case class Climb (name: String)
 
 /**
   * Created by andrew on 11/10/16.
   */
-class UkcSearchScraper(val searchLoc: String) {
+class UkcCragSearchScraper(val searchLoc: String) {
 
   val browser = JsoupBrowser()
   val cragSearchDoc = browser.get(s"http://www.ukclimbing.com/logbook/map/liveresults.php?g=0&loc=$searchLoc&dist=50&km=1&q=")
@@ -24,7 +23,7 @@ class UkcSearchScraper(val searchLoc: String) {
 
   def requestClimbs(ukcCragId: Int) = {
     val climbSearchDoc = browser.get(s"http://www.ukclimbing.com/logbook/crag.php?id=$ukcCragId")
-
+    //val climbs = climbSearchDoc >>
   }
 
   val crags = cragSearchDoc >> elements(".panel") map {
