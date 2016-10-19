@@ -9,7 +9,7 @@ import net.ruippeixotog.scalascraper.model.Element
 import scala.util.matching.Regex
 
 
-case class Crag (name: String, ukcCragId: Int, climbs: List[Climb])
+case class Crag (name: String, ukcCragId: Int, climbs: Iterable[Climb])
 
 /**
   * Created by andrew on 11/10/16.
@@ -21,13 +21,9 @@ class UkcCragSearchScraper(val searchLoc: String) {
 
   def ukcCragIdFromResults(e: Element) = """id=([0-9]+)""".r.findFirstMatchIn(e.attr("onclick")).get.group(1).toInt
 
-  def requestClimbs(ukcCragId: Int) = {
-    val climbSearchDoc = browser.get(s"http://www.ukclimbing.com/logbook/crag.php?id=$ukcCragId")
-    //val climbs = climbSearchDoc >>
-  }
-
   val crags = cragSearchDoc >> elements(".panel") map {
-    e => Crag(
-      e >> text(".panel-heading"), ukcCragIdFromResults(e), Nil)
+    e => val cragId = ukcCragIdFromResults(e); Crag(
+      e >> text(".panel-heading"), cragId, (new UkcClimbSearchScaper(cragId)).climbs
+      )
   }
 }
