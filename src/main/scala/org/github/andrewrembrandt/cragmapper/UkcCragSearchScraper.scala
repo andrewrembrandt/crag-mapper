@@ -23,7 +23,7 @@ class UkcCragSearchScraper(val searchLoc: String) {
 
   val crags = cragSearchDoc >> elements(".panel") map {
     e => val cragId = ukcCragIdFromResults(e); Crag(
-      e >> text(".panel-heading"), cragId, (new UkcClimbSearchScaper(cragId)).climbs.toList
+      e >> text(".panel-heading"), cragId, UkcClimbSearchScaper.extractClimbs(cragId)
       )
   } toList
 }

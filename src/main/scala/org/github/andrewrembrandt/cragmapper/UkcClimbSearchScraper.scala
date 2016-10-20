@@ -11,21 +11,23 @@ trait Climb {
   val name: String
   val ukcId: Int
   val grade: String
+}
 
-  val TradGradRegex = """^[MDHVSE]{1,3}[0-9]?\s*[3-7][a-c]$"""
+object Climb {
+  val TradGradeRegex = """^([MDHVSE]{1,3}[0-9]?\s*[3-7][a-c])$""".r
+  val FrenchGradeRegex = """^F?([3-9][a-c][\+-]?)$""".r
 
-  def applyFromGrade(grade: String, name: String, ukcId: Int) {
-    match grade {
-      case grade
+  def apply(name: String, ukcId: Int, grade: String): Option[Climb] = {
+    grade match {
+      case TradGradeRegex(grade) => Some(new TradClimb(name, ukcId, grade))
+      case _ => None
     }
   }
 }
 
-class TradClimb extends Climb {
-  val name: String = _
-  val ukcId: Int = _
-  val grade: String = _
-}
+case class TradClimb(name: String, ukcId: Int, grade: String) extends Climb
+case class SportClimb (name: String, ukcId: Int, grade: String) extends Climb
+
 
 
 /**
@@ -33,15 +35,16 @@ class TradClimb extends Climb {
   */
 object UkcClimbSearchScaper{
 
-  def extractClimbs(cragId: Int) {
+  def extractClimbs(cragId: Int): List[Climb] = {
     val cragDoc = JsoupBrowser().get(s"http://www.ukclimbing.com/logbook/crag.php?id=$cragId")
 
-    val climbs = (cragDoc >> elements(".climb")).map(e => new Climb(e)) toList
+    return ((cragDoc >> elements(".climb")).map(e =>extractClimb(e)) toList).flatten
   }
 
   def extractClimb(climbRowEl: Element) = {
-    val name = climbRowEl.select(".name").head.text
-    val id = climbRowEl.attr("data-id").toInt
-    val grade =climbRowEl.select("td[nowrap]").head.text.trim())
+    Climb.apply(
+      climbRowEl.select(".name").head.text,
+      climbRowEl.attr("data-id").toInt,
+      climbRowEl.select("td[nowrap]").head.text.trim())
   }
 }
