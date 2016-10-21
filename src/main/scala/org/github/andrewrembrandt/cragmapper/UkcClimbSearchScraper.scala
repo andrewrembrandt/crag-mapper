@@ -4,7 +4,7 @@ import net.ruippeixotog.scalascraper.browser.JsoupBrowser
 import net.ruippeixotog.scalascraper.dsl.DSL._
 import net.ruippeixotog.scalascraper.dsl.DSL.Extract._
 import net.ruippeixotog.scalascraper.dsl.DSL.Parse._
-import net.ruippeixotog.scalascraper.model.Element
+  import net.ruippeixotog.scalascraper.model.Element
 
 
 trait Climb {
@@ -20,6 +20,7 @@ object Climb {
   def apply(name: String, ukcId: Int, grade: String): Option[Climb] = {
     grade match {
       case TradGradeRegex(grade) => Some(new TradClimb(name, ukcId, grade))
+      case FrenchGradeRegex(grade) => Some(new SportClimb(name, ukcId, grade))
       case _ => None
     }
   }
@@ -35,10 +36,10 @@ case class SportClimb (name: String, ukcId: Int, grade: String) extends Climb
   */
 object UkcClimbSearchScaper{
 
-  def extractClimbs(cragId: Int): List[Climb] = {
-    val cragDoc = JsoupBrowser().get(s"http://www.ukclimbing.com/logbook/crag.php?id=$cragId")
+  def retrieveCragDoc(cragId: Int) = JsoupBrowser().get(s"http://www.ukclimbing.com/logbook/crag.php?id=$cragId");
 
-    return ((cragDoc >> elements(".climb")).map(e =>extractClimb(e)) toList).flatten
+  def extractClimbs(cragId: Int): List[Climb] = {
+    ((retrieveCragDoc(cragId) >> elements(".climb")).map(e =>extractClimb(e)) toList).flatten
   }
 
   def extractClimb(climbRowEl: Element) = {
