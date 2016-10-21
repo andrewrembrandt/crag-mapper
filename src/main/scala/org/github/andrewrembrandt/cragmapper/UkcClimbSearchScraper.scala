@@ -19,7 +19,8 @@ object Climb {
 
   def apply(name: String, ukcId: Int, grade: String): Option[Climb] = {
     grade match {
-      case TradGradeRegex(grade) => Some(new TradClimb(name, ukcId, grade))
+      case TradGradeRegex(grade) => Some(TradClimb(name, ukcId, grade))
+      case FrenchGradeRegex(grade) => Some(SportClimb(name, ukcId, grade))
       case _ => None
     }
   }
