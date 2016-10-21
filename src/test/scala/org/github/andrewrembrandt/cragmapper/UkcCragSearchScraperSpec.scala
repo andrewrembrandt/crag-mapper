@@ -5,10 +5,11 @@ import org.scalatest._
 /**
   * Created by Andrew on 19/10/2016.
   */
-class UkcCragSearchScraperSpec extends FlatSpec {
+class UkcCragSearchScraperSpec extends FlatSpec with Matchers {
   "A Crag Scraper" should "extract Crags for this real crag" in {
-    val ukcCragSearchScaper = new UkcCragSearchScraper("Tenerife")
+    val ukcCragSearchScraper = new UkcCragSearchScraper("Tenerife")
 
-    print(ukcCragSearchScaper.crags)
+    ukcCragSearchScraper.crags.length should be > 0
+    print(ukcCragSearchScraper.crags)
   }
 }
