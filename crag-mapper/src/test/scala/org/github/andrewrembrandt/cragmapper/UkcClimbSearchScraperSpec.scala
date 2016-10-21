@@ -7,7 +7,7 @@ import org.scalatest._
   */
 class UkcClimbSearchScraperSpec extends FlatSpec with Matchers {
   "A Climb Scraper" should "extract climbs for this real crag" in {
-    val climbs = UkcClimbSearchScaper.extractClimbs(2375)
+    val climbs = UkcClimbSearchScaper.extractClimbs(21606)
 
     climbs.length should be > 1
 
