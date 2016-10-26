@@ -10,7 +10,7 @@ lazy val cragmapper = (project in file("crag-mapper")).settings(
   libraryDependencies ++= Seq(
     "org.scalatest" % "scalatest_2.11" % "3.0.0" % "test",
     "org.specs2" %% "specs2-core" % "3.7.2" % "test",
-	"com.hazelcast" %% "hazelcast-scala" % "latest-integration",
+	"com.hazelcast" %% "hazelcast-scala" % "3.7.2",
 	"com.typesafe.akka" % "akka-actor" % "2.0",
 	"net.ruippeixotog" %% "scala-scraper" % "1.1.0"
   )
