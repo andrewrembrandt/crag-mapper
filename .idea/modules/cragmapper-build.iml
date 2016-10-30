@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="crag-mapper-build" external.linked.project.path="$MODULE_DIR$/../../project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="sbt._, Keys._, dsl._, _root_.org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.org.scalajs.sbtplugin.ScalaJSJUnitPlugin, _root_.org.scalajs.sbtplugin.ScalaJSPlugin, $3dbd04631ed6a6aaed8d.cragmapperclient, $3dbd04631ed6a6aaed8d.cragmapper" sbt.resolvers="http://repo.artima.com/releases|maven|Artima Maven Repository, C:\Users\Andrew\.ivy2\cache|ivy|Local cache, https://jcenter.bintray.com/|maven|jcenter, http://repo.typesafe.com/typesafe/releases/|maven|Typesafe Repository, https://repo1.maven.org/maven2/|maven|public" type="SBT_MODULE" version="4">
+<module external.linked.project.id="cragmapper-build" external.linked.project.path="$MODULE_DIR$/../../crag-mapper/project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="sbt._, Keys._, dsl._, _root_.org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.org.scalajs.sbtplugin.ScalaJSJUnitPlugin, _root_.org.scalajs.sbtplugin.ScalaJSPlugin, $3dbd04631ed6a6aaed8d.cragmapperclient, $3dbd04631ed6a6aaed8d.cragmapper" sbt.resolvers="http://repo.artima.com/releases|maven|Artima Maven Repository, C:\Users\Andrew\.ivy2\cache|ivy|Local cache, https://jcenter.bintray.com/|maven|jcenter, http://repo.typesafe.com/typesafe/releases/|maven|Typesafe Repository, https://repo1.maven.org/maven2/|maven|public" type="SBT_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/../../project/target/idea-classes" />
-    <output-test url="file://$MODULE_DIR$/../../project/target/idea-test-classes" />
+    <output url="file://$MODULE_DIR$/../../crag-mapper/project/target/idea-classes" />
+    <output-test url="file://$MODULE_DIR$/../../crag-mapper/project/target/idea-test-classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../project">
-      <sourceFolder url="file://$MODULE_DIR$/../../project" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../project/project/target" />
-      <excludeFolder url="file://$MODULE_DIR$/../../project/target" />
+    <content url="file://$MODULE_DIR$/../../crag-mapper/project">
+      <sourceFolder url="file://$MODULE_DIR$/../../crag-mapper/project" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../crag-mapper/project/project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/../../crag-mapper/project/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

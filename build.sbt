@@ -19,6 +19,7 @@ lazy val cragmapper = (project in file("crag-mapper")).settings(
 lazy val cragmapperclient = (project in file("crag-mapper-client")).settings(
   libraryDependencies ++= Seq(
     "org.scalatest" % "scalatest_2.11" % "3.0.0" % "test",
-    "org.specs2" %% "specs2-core" % "3.7.2" % "test"
+    "org.specs2" %% "specs2-core" % "3.7.2" % "test",
+    "com.lihaoyi" %%% "scalatags" % "0.6.1"
   )
 ).enablePlugins(ScalaJSPlugin)
