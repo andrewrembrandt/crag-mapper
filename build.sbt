@@ -1,25 +1,42 @@
-name:= "crag-mapper"
-version in ThisBuild:= "0.1"
-scalaVersion in ThisBuild:= "2.11.8"
 
-resolvers in ThisBuild += "Artima Maven Repository" at "http://repo.artima.com/releases"
-resolvers in ThisBuild += Resolver.jcenterRepo
-resolvers in ThisBuild += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+lazy val scalaV = "2.11.8"
 
-lazy val cragmapper = (project in file("crag-mapper")).settings(
+lazy val server = (project in file("crag-mapper-server")).settings(
+  scalaVersion := scalaV,
+  scalaJSProjects := Seq(client),
+  pipelineStages in Assets := Seq(scalaJSPipeline),
+  pipelineStages := Seq(digest, gzip),
+  // triggers scalaJSPipeline when using compile or continuous compilation
+  compile in Compile <<= (compile in Compile) dependsOn scalaJSPipeline,
   libraryDependencies ++= Seq(
-    "org.scalatest" % "scalatest_2.11" % "3.0.0" % "test",
-    "org.specs2" %% "specs2-core" % "3.7.2" % "test",
-	"com.hazelcast" %% "hazelcast-scala" % "3.7.2",
-	"com.typesafe.akka" % "akka-actor" % "2.0",
-	"net.ruippeixotog" %% "scala-scraper" % "1.1.0"
-  )
-)
+    "com.vmunier" %% "scalajs-scripts" % "1.0.0",
+    specs2 % Test
+  ),
+  // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
+  EclipseKeys.preTasks := Seq(compile in Compile)
+).enablePlugins(PlayScala).
+  dependsOn(sharedJvm)
 
-lazy val cragmapperclient = (project in file("crag-mapper-client")).settings(
+lazy val client = (project in file("crag-mapper-client")).settings(
+  scalaVersion := scalaV,
+  persistLauncher := true,
+  persistLauncher in Test := false,
   libraryDependencies ++= Seq(
-    "org.scalatest" % "scalatest_2.11" % "3.0.0" % "test",
-    "org.specs2" %% "specs2-core" % "3.7.2" % "test",
-    "com.lihaoyi" %%% "scalatags" % "0.6.1"
-  )
-).enablePlugins(ScalaJSPlugin)
+    "org.scala-js" %%% "scalajs-dom" % "0.9.1",
+    "be.doeraene" %%% "scalajs-jquery" % "0.9.0"
+  ),
+  jsDependencies +=
+    "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
+  jsDependencies += RuntimeDOM
+).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
+  dependsOn(sharedJs)
+
+lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared")).
+  settings(scalaVersion := scalaV).
+  jsConfigure(_ enablePlugins ScalaJSWeb)
+
+lazy val sharedJvm = shared.jvm
+lazy val sharedJs = shared.js
+
+// loads the server project at sbt startup
+onLoad in Global := (Command.process("project server", _: State)) compose (onLoad in Global).value

@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client-build.iml" filepath="$PROJECT_DIR$/.idea/modules/client-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/crag-mapper.iml" filepath="$PROJECT_DIR$/.idea/modules/crag-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/crag-mapper-build.iml" filepath="$PROJECT_DIR$/.idea/modules/crag-mapper-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cragmapper.iml" filepath="$PROJECT_DIR$/.idea/modules/cragmapper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cragmapper-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cragmapper-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cragmapperclient.iml" filepath="$PROJECT_DIR$/.idea/modules/cragmapperclient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cragmapperclient-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cragmapperclient-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crag-mapper-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/crag-mapper-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server-build.iml" filepath="$PROJECT_DIR$/.idea/modules/server-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJS.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJS-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJVM.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJVM-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJVM-build.iml" />
     </modules>
   </component>
 </project>
