@@ -1,23 +1,14 @@
-package org.github.andrewrembrandt.cragmapperclient
+package org.github.andrewrembrandt.cragmapper
+package client
 
 import org.scalajs.dom
-import shared.SharedMessages
-
-import org.scalajs.dom
-import org.scalajs.dom.{ XMLHttpRequest, document }
-import org.scalajs.jquery.{ JQuery, jQuery, JQueryAjaxSettings, JQueryXHR }
-import org.scalajs.dom.raw.HTMLElement
-
 
 import scala.scalajs.js
-import scala.scalajs.js.Dynamic.{ global => g, literal => lit, newInstance => jsnew }
-import scala.scalajs.js.annotation.JSExport
-import scala.scalajs.js.{ Array, Date, JSON }
+import scala.scalajs.js.Dynamic.{global => g, literal => lit, newInstance => jsnew}
 
 object Main extends js.JSApp {
   def main(): Unit = {
     initMap()
-    dom.document.getElementById("scalajsShoutOut").textContent = SharedMessages.itWorks
   }
 
   def initMap() = {

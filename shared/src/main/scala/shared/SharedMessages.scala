@@ -1,3 +1,4 @@
+package org.github.andrewrembrandt.cragmapper
 package shared
 
 object SharedMessages {
