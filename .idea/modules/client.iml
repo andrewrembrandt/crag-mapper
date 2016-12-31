@@ -29,5 +29,8 @@
     <orderEntry type="library" scope="TEST" name="SBT: org.scala-js:scalajs-test-interface_2.11:0.6.13:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.8:jar" level="project" />
     <orderEntry type="library" name="SBT: be.doeraene:scalajs-jquery_sjs0.6_2.11:0.9.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.lihaoyi:derive_sjs0.6_2.11:0.4.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.lihaoyi:sourcecode_sjs0.6_2.11:0.1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.lihaoyi:upickle_sjs0.6_2.11:0.4.3:jar" level="project" />
   </component>
 </module>

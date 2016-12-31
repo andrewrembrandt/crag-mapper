@@ -5,7 +5,10 @@ import org.scalajs.dom
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{global => g, literal => lit, newInstance => jsnew}
-import scala.scalajs.js.JSON
+
+import upickle.default._
+
+case class Crag(name: String, lat: Double, lng: Double)
 
 object Main extends js.JSApp {
   def main(): Unit = {
@@ -13,16 +16,22 @@ object Main extends js.JSApp {
   }
 
   def initMap() = {
-    val lat = -25.363
-    val long = 131.044
 
-
-
-    var points = JSON.parse(dom.document.getElementById("crags").innerHTML);
+    val crags = read[List[Crag]](dom.document.getElementById("crags").innerHTML)
 
     val map_canvas = dom.document.getElementById("map_canvas")
-    val map_options = lit(center = (jsnew(g.google.maps.LatLng))(lat, long), zoom = 4, mapTypeId = g.google.maps.MapTypeId.ROADMAP)
-    val gogleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
-    val marker = (jsnew(g.google.maps.Marker))(lit(map = gogleMap, position = (jsnew(g.google.maps.LatLng)(lat, long))))
+    val map_options = lit(
+                center = (jsnew(g.google.maps.LatLng))(crags(0).lat, crags(0).lng),
+                zoom = 13,
+                mapTypeId = g.google.maps.MapTypeId.ROADMAP)
+
+    val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
+
+    val markers = crags.foreach(c => (jsnew(g.google.maps.Marker))(
+      lit(
+        map = googleMap,
+        position = (jsnew(g.google.maps.LatLng)(c.lat, c.lng)),
+        title = c.name
+      )))
   }
 }
