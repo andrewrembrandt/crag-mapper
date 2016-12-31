@@ -5,6 +5,7 @@ import org.scalajs.dom
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{global => g, literal => lit, newInstance => jsnew}
+import scala.scalajs.js.JSON
 
 object Main extends js.JSApp {
   def main(): Unit = {
@@ -14,6 +15,10 @@ object Main extends js.JSApp {
   def initMap() = {
     val lat = -25.363
     val long = 131.044
+
+
+
+    var points = JSON.parse(dom.document.getElementById("crags").innerHTML);
 
     val map_canvas = dom.document.getElementById("map_canvas")
     val map_options = lit(center = (jsnew(g.google.maps.LatLng))(lat, long), zoom = 4, mapTypeId = g.google.maps.MapTypeId.ROADMAP)
