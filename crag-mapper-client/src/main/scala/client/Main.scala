@@ -4,10 +4,9 @@ package client
 import org.scalajs.dom
 
 import scala.scalajs.js
-import scala.scalajs.js.Dynamic.{global => g, literal => lit, newInstance => jsnew}
 import upickle.default._
 import google.maps.Data.Feature
-import google.maps.LatLng
+import google.maps.{LatLng, MarkerImage, Size}
 import org.github.andrewrembrandt.cragmapper.shared.models._
 
 object Main extends js.JSApp {
@@ -36,6 +35,7 @@ object Main extends js.JSApp {
           position = new google.maps.LatLng(c.lat, c.lng),
           title = c.name
         ))
+        marker.setIcon(MarkerImage(url = "/assets/images/camiconp.svg", size = new Size(120,120)))
 
         def genInfoText(crag: Crag) = s"""<div id="content">
           <h2 id="firstHeading" class="firstHeading">${c.name}</h2>
