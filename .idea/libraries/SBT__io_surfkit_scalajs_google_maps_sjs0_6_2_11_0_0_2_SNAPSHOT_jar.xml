@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: io.surfkit:scalajs-google-maps_sjs0.6_2.11:0.0.2-SNAPSHOT:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/io.surfkit/scalajs-google-maps_sjs0.6_2.11/jars/scalajs-google-maps_sjs0.6_2.11-0.0.2-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/io.surfkit/scalajs-google-maps_sjs0.6_2.11/docs/scalajs-google-maps_sjs0.6_2.11-0.0.2-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

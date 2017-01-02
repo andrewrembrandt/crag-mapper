@@ -28,7 +28,8 @@ lazy val client = (project in file("crag-mapper-client"))
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.1" withJavadoc(),
     "be.doeraene" %%% "scalajs-jquery" % "0.9.0" withJavadoc(),
-    "com.lihaoyi" %%% "upickle" % "0.4.3"
+    "com.lihaoyi" %%% "upickle" % "0.4.3" withJavadoc(),
+    "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT" withJavadoc()
   ),
   jsDependencies +=
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
@@ -46,6 +47,8 @@ lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared")).
 
 lazy val sharedJvm = shared.jvm
 lazy val sharedJs = shared.js
+
+resolvers in ThisBuild += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 // loads the server project at sbt startup
 onLoad in Global := (Command.process("project server", _: State)) compose (onLoad in Global).value

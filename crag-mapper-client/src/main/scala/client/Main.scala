@@ -8,6 +8,9 @@ import scala.scalajs.js.Dynamic.{global => g, literal => lit, newInstance => jsn
 
 import upickle.default._
 
+import google.maps.Data.Feature
+import google.maps.LatLng
+
 case class Crag(name: String, lat: Double, lng: Double)
 
 object Main extends js.JSApp {
@@ -19,18 +22,19 @@ object Main extends js.JSApp {
 
     val crags = read[List[Crag]](dom.document.getElementById("crags").innerHTML)
 
-    val map_canvas = dom.document.getElementById("map_canvas")
-    val map_options = lit(
-                center = (jsnew(g.google.maps.LatLng))(crags(0).lat, crags(0).lng),
-                zoom = 13,
-                mapTypeId = g.google.maps.MapTypeId.ROADMAP)
+    val mapCanvas = dom.document.getElementById("map_canvas")
 
-    val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
+    val mapOpts = google.maps.MapOptions(
+      center = new LatLng(crags(0).lat, crags(0).lng),
+      zoom = 13,
+      mapTypeId = google.maps.MapTypeId.ROADMAP
+    )
 
-    val markers = crags.foreach(c => (jsnew(g.google.maps.Marker))(
-      lit(
+    val googleMap = new google.maps.Map(mapCanvas, mapOpts)
+
+    val markers = crags.foreach(c => new google.maps.Marker(google.maps.MarkerOptions(
         map = googleMap,
-        position = (jsnew(g.google.maps.LatLng)(c.lat, c.lng)),
+        position = new google.maps.LatLng(c.lat, c.lng),
         title = c.name
       )))
   }
