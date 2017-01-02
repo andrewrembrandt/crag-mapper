@@ -1,0 +1,14 @@
+@(message: String, apiKey: String, initialCrags: String)
+
+@main("Crag Mapper") {
+<h2>Browse the worlds crag databases in an handy visual map format</h2>
+
+<div id="map_canvas" style="height: 430px; width: 512px;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=@apiKey"></script>
+
+<script type="application/json" id="crags">
+@Html(initialCrags)
+</script>
+
+}

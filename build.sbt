@@ -12,6 +12,7 @@ lazy val server = (project in file("crag-mapper-server"))
   compile in Compile <<= (compile in Compile) dependsOn scalaJSPipeline,
   libraryDependencies ++= Seq(
     "com.vmunier" %% "scalajs-scripts" % "1.0.0" withJavadoc(),
+    "com.lihaoyi" %%% "upickle" % "0.4.3" withJavadoc(),
     specs2 % Test
   ),
   // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present

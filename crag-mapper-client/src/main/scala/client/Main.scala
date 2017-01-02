@@ -5,13 +5,10 @@ import org.scalajs.dom
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{global => g, literal => lit, newInstance => jsnew}
-
 import upickle.default._
-
 import google.maps.Data.Feature
 import google.maps.LatLng
-
-case class Crag(name: String, lat: Double, lng: Double)
+import org.github.andrewrembrandt.cragmapper.shared.models._
 
 object Main extends js.JSApp {
   def main(): Unit = {
@@ -30,12 +27,29 @@ object Main extends js.JSApp {
       mapTypeId = google.maps.MapTypeId.ROADMAP
     )
 
-    val googleMap = new google.maps.Map(mapCanvas, mapOpts)
+    val gmap = new google.maps.Map(mapCanvas, mapOpts)
 
-    val markers = crags.foreach(c => new google.maps.Marker(google.maps.MarkerOptions(
-        map = googleMap,
-        position = new google.maps.LatLng(c.lat, c.lng),
-        title = c.name
-      )))
+    val markers = crags.foreach(c =>
+      {
+        val marker = new google.maps.Marker(google.maps.MarkerOptions(
+          map = gmap,
+          position = new google.maps.LatLng(c.lat, c.lng),
+          title = c.name
+        ))
+
+        def genInfoText(crag: Crag) = s"""<div id="content">
+          <h2 id="firstHeading" class="firstHeading">${c.name}</h2>
+          <div id="bodyContent">""" +
+          (if(c.sport.nonEmpty) s"""<p><b>${c.sport.size} Sport Climbs</b></p>""" else "") +
+          (if(c.trad.nonEmpty) s"""<p><b>${c.trad.size} Trad Climbs</b></p>""" else "") +
+          (if(c.boulder.nonEmpty) s"""<p><b>${c.boulder.size} Boulder Problems</b></p>""" else "") +
+          """</div></div>"""
+
+        val infowindow = new google.maps.InfoWindow(google.maps.InfoWindowOptions(
+          content=genInfoText(c)
+        ))
+
+        google.maps.event.addListener(marker, "click", () => infowindow.open(gmap,marker) )
+      })
   }
 }
