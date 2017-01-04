@@ -35,7 +35,10 @@ object Main extends js.JSApp {
           position = new google.maps.LatLng(c.lat, c.lng),
           title = c.name
         ))
-        marker.setIcon(MarkerImage(url = "/assets/images/camiconp.svg", size = new Size(120,120)))
+        marker.setIcon(MarkerImage(
+          url = "/assets/images/camiconp.svg",
+          size = new Size(45,103),
+          scaledSize = new Size(23, 52)))
 
         def genInfoText(crag: Crag) = s"""<div id="content">
           <h2 id="firstHeading" class="firstHeading">${c.name}</h2>
