@@ -36,7 +36,7 @@ object Main extends js.JSApp {
           title = c.name
         ))
         marker.setIcon(MarkerImage(
-          url = "/assets/images/camiconp.svg",
+          url = "/assets/images/camiconp2.svg",
           size = new Size(45,103),
           scaledSize = new Size(23, 52)))
 
