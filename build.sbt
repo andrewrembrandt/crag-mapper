@@ -13,6 +13,7 @@ lazy val server = (project in file("crag-mapper-server"))
   libraryDependencies ++= Seq(
     "com.vmunier" %% "scalajs-scripts" % "1.0.0" withJavadoc(),
     "com.lihaoyi" %%% "upickle" % "0.4.3" withJavadoc(),
+    "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3" exclude("org.webjars", "jquery"),
     specs2 % Test
   ),
   // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
@@ -30,7 +31,8 @@ lazy val client = (project in file("crag-mapper-client"))
     "org.scala-js" %%% "scalajs-dom" % "0.9.1" withJavadoc(),
     "be.doeraene" %%% "scalajs-jquery" % "0.9.0" withJavadoc(),
     "com.lihaoyi" %%% "upickle" % "0.4.3" withJavadoc(),
-    "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT" withJavadoc()
+    "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT" withJavadoc(),
+    "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3" exclude("org.webjars", "jquery")
   ),
   jsDependencies +=
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
@@ -53,3 +55,7 @@ resolvers in ThisBuild += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/
 
 // loads the server project at sbt startup
 onLoad in Global := (Command.process("project server", _: State)) compose (onLoad in Global).value
+
+libraryDependencies ++= Seq(
+  "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3"
+)
