@@ -37,8 +37,8 @@ object Main extends js.JSApp {
         ))
         marker.setIcon(MarkerImage(
           url = "/assets/images/camiconp2.svg",
-          size = new Size(45,103),
-          scaledSize = new Size(23, 52)))
+          size = new Size(52,89),
+          scaledSize = new Size(26, 45)))
 
         def genInfoText(crag: Crag) = s"""<div id="content">
           <h2 id="firstHeading" class="firstHeading">${c.name}</h2>
