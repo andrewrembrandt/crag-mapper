@@ -36,6 +36,8 @@ lazy val client = (project in file("crag-mapper-client"))
   ),
   jsDependencies +=
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
+  jsDependencies +=
+    "org.webjars" % "Snap.svg" % "0.4.1" / "0.4.1/snap.svg-min.js",
   jsDependencies += RuntimeDOM
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
   dependsOn(sharedJs)

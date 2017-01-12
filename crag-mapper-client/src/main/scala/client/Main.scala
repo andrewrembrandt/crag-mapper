@@ -9,9 +9,16 @@ import google.maps.Data.Feature
 import google.maps.{LatLng, MarkerImage, Size}
 import org.github.andrewrembrandt.cragmapper.shared.models._
 
+import scala.scalajs.js.Dynamic.{global => g, literal => l, newInstance => jsn}
+
 object Main extends js.JSApp {
   def main(): Unit = {
     initMap()
+    initSvg()
+  }
+
+  def initSvg() = {
+    val s = (jsn(g.Snap))("#svg")
   }
 
   def initMap() = {
