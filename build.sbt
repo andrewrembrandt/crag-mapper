@@ -2,7 +2,7 @@
 lazy val scalaV = "2.11.8"
 
 lazy val server = (project in file("crag-mapper-server"))
-    .settings(viewSettings: _*)
+  .settings(viewSettings: _*)
   .settings(
   scalaVersion := scalaV,
   scalaJSProjects := Seq(client),
@@ -14,6 +14,7 @@ lazy val server = (project in file("crag-mapper-server"))
     "com.vmunier" %% "scalajs-scripts" % "1.0.0" withJavadoc(),
     "com.lihaoyi" %%% "upickle" % "0.4.3" withJavadoc(),
     "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3" exclude("org.webjars", "jquery"),
+    "org.webjars" % "Snap.svg" % "0.4.1",
     specs2 % Test
   ),
   // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
@@ -36,8 +37,6 @@ lazy val client = (project in file("crag-mapper-client"))
   ),
   jsDependencies +=
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
-  jsDependencies +=
-    "org.webjars" % "Snap.svg" % "0.4.1" / "0.4.1/snap.svg-min.js",
   jsDependencies += RuntimeDOM
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
   dependsOn(sharedJs)

@@ -16,9 +16,15 @@ object Main extends js.JSApp {
     initMap()
     initSvg()
   }
+  val svgTempl = (g.Snap)("#svg")
 
   def initSvg() = {
-    val s = (jsn(g.Snap))("#svg")
+    g.onSvgTemplLoad = onSvgTemplLoadImpl _
+    g.Snap.load("/assets/images/camiconp2.svg", g.onSvgTemplLoad)
+  }
+
+  def onSvgTemplLoadImpl(data: js.Any) = {
+    l(svgTempl.append(data))
   }
 
   def initMap() = {
