@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="crag-mapper-client/src/main/scala"/>
+	<classpathentry kind="src" path="crag-mapper-server-old/src/main/scala"/>
+	<classpathentry kind="src" path="crag-mapper-server-old/src/test/scala"/>
+	<classpathentry kind="src" path="crag-mapper-server/app"/>
+	<classpathentry kind="src" path="crag-mapper-server/target/scala-2.11/routes/main"/>
+	<classpathentry kind="src" path="crag-mapper-server/target/scala-2.11/twirl/main"/>
+	<classpathentry kind="src" path="crag-mapper-server/target/web/classes/main/META-INF/resources/webjars/server/0.1-SNAPSHOT/238ebd2367a85465c490"/>
+	<classpathentry kind="src" path="crag-mapper-server/target/web/classes/main/META-INF/resources/webjars/server/0.1-SNAPSHOT/b09a7737c05624122c57"/>
+	<classpathentry kind="src" path="crag-mapper-server/target/web/public/main/238ebd2367a85465c490"/>
+	<classpathentry kind="src" path="crag-mapper-server/target/web/public/main/b09a7737c05624122c57"/>
+	<classpathentry kind="src" path="crag-mapper-server/test"/>
+	<classpathentry kind="src" path="shared/src/main/scala"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="crag-mapper-server/target/scala-2.11/classes"/>
+</classpath>
