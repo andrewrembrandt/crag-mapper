@@ -12,22 +12,25 @@ import org.github.andrewrembrandt.cragmapper.shared.models._
 import scala.scalajs.js.Dynamic.{global => g, literal => l, newInstance => jsn}
 import akauppi.scalajs.snapsvg._
 
+import scala.scalajs.js.annotation.JSExport
+
 object Main extends js.JSApp {
   def main(): Unit = {
     initMap()
     initSvg()
   }
-  val svgTempl = (g.Snap)("#svg")
 
+  val tmpSvg = Snap("#svg")
 
   def initSvg() = {
-    val tmpSvg = Snap("#svg")
+
     //tmpSvg.circle(90, 120, 80)
-    Snap.load("/assets/images/camiconp2.svg", onSvgLoad(), tmpSvg)
+    val frag = Snap.load("/assets/images/camiconp2.svg", onSvgLoad(), tmpSvg)
   }
 
+  @JSExport
   def onSvgLoad() = {
-
+    println("test")
   }
 
   def initMap() = {

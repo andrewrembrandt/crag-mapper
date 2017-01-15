@@ -14,7 +14,7 @@ lazy val server = (project in file("crag-mapper-server"))
     "com.vmunier" %% "scalajs-scripts" % "1.0.0" withJavadoc(),
     "com.lihaoyi" %%% "upickle" % "0.4.3" withJavadoc(),
     "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3" exclude("org.webjars", "jquery"),
-    "org.webjars" % "Snap.svg" % "0.4.1",
+    "org.webjars" % "Snap.svg" % "0.3.0",
     specs2 % Test
   ),
   // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
