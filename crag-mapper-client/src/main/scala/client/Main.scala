@@ -10,6 +10,7 @@ import google.maps.{LatLng, MarkerImage, Size}
 import org.github.andrewrembrandt.cragmapper.shared.models._
 
 import scala.scalajs.js.Dynamic.{global => g, literal => l, newInstance => jsn}
+import akauppi.scalajs.snapsvg._
 
 object Main extends js.JSApp {
   def main(): Unit = {
@@ -17,8 +18,15 @@ object Main extends js.JSApp {
     initSvg()
   }
 
+
   def initSvg() = {
-    val s = (jsn(g.Snap))("#svg")
+    val tmpSvg = Snap("#svg")
+    //tmpSvg.circle(90, 120, 80)
+    Snap.load("/assets/images/camiconp2.svg", onSvgLoad(), tmpSvg)
+  }
+
+  def onSvgLoad() = {
+
   }
 
   def initMap() = {
