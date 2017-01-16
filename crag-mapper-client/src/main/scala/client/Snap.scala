@@ -199,7 +199,7 @@ object Snap extends js.Object {
   //  
   // tbd: callback parameters?
   //
-  def load( url: String, callback: => Unit, scope: js.Object ): SnapFragment = ???
+  def load( url: String, callback: => js.Function1[SnapFragment, Unit], scope: js.UndefOr[js.Object] = js.undefined): Unit = ???
 
   def getElementByPoint( x: Double, y: Double ): SnapElement = ???
 
