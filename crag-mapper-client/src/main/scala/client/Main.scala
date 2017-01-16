@@ -20,7 +20,7 @@ object Main extends js.JSApp {
     initSvg()
   }
 
-  val tmpSvg = Snap("#svg")
+  val tmpSvg: SnapPaper = Snap("#svg")
 
   def initSvg() = {
 
@@ -29,8 +29,8 @@ object Main extends js.JSApp {
   }
 
   @JSExport
-  def onSvgLoad(frag: SnapFragment) = {
-    println(frag)
+  def onSvgLoad(frag: SnapFragment): Unit = {
+    tmpSvg.append(frag)
   }
 
   def initMap() = {

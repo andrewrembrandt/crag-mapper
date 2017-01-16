@@ -627,7 +627,7 @@ trait SnapAnimDescriptor extends js.Object
 *     similar of 'Element'.
 */
 @js.native
-trait SnapFragment extends js.Object {
+trait SnapFragment extends SnapElement {
   def select: Unit = js.native
   def selectAll: Unit = js.native
 }
@@ -700,7 +700,7 @@ trait SnapSplit extends js.Object
 * Paper
 */
 @js.native
-trait SnapPaper extends js.Object {
+trait SnapPaper extends SnapElement {
 
   // SNAPSVG API inconsistency: doc says "and no attributes" but there's an attribute parameter.
   //
