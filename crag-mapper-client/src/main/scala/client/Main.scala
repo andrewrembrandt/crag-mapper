@@ -25,12 +25,14 @@ object Main extends js.JSApp {
   def initSvg() = {
 
     //tmpSvg.circle(90, 120, 80)
-    val frag = Snap.load("/assets/images/camiconp2.svg", (f: SnapFragment) => onSvgLoad(f))
+    Snap.load("/assets/images/camiconp2.svg", (f: SnapFragment) => onSvgLoad(f))
   }
 
-  @JSExport
   def onSvgLoad(frag: SnapFragment): Unit = {
+    val text = frag.select("#badge")
+    text.attr(l(text = "16"))
     tmpSvg.append(frag)
+
   }
 
   def initMap() = {
