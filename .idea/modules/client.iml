@@ -34,5 +34,6 @@
     <orderEntry type="library" name="SBT: org.scala-js:scalajs-dom_sjs0.6_2.11:0.9.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.webjars:jquery:2.1.4:jar" level="project" />
     <orderEntry type="library" name="scala-sdk-2.11.8" level="application" />
+    <orderEntry type="library" name="scala-sdk-2.11.8" level="project" />
   </component>
 </module>
