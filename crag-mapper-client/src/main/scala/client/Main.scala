@@ -23,8 +23,6 @@ object Main extends js.JSApp {
   val tmpSvg: SnapPaper = Snap("#svg")
 
   def initSvg() = {
-
-    //tmpSvg.circle(90, 120, 80)
     Snap.load("/assets/images/camiconp2.svg", (f: SnapFragment) => onSvgLoad(f))
   }
 
