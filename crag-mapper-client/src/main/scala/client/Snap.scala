@@ -407,9 +407,9 @@ trait SnapElement extends js.Object {
   def removeData( key: String ): this.type = js.native
   def removeData(): this.type = js.native
 
-  def outerSVG: String = js.native
-  def innerSVG: String = js.native
-  override def toString: String = js.native    // alias for 'outerSVG'
+  def outerSVG(): String = js.native
+  def innerSVG(): String = js.native
+  def toString(sType: Any): String = js.native    // alias for 'outerSVG'
 
   // SNAPSVG DOCUMENTATION AMBIGUITY:
   //    The doc says 'flag' and "determine whether the class should be added or removed".

@@ -33,6 +33,7 @@ object Main extends js.JSApp {
     text.attr(l(text = "16"))
     tmpSvg.append(frag)
 
+    println(tmpSvg.outerSVG())
   }
 
   def initMap() = {
