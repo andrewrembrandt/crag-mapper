@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="incrementalityType" value="SBT" />
-    <profile name="SBT 1" modules="cragmapper,frontendSharedJVM" />
+    <profile name="SBT 1" modules="frontendSharedJVM,cragmapper,mountainTripper,sharedCrossJVM" />
     <profile name="SBT 2" modules="root,demo">
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.2/jars/scalajs-compiler_2.12.2-0.6.19.jar" />
@@ -30,6 +30,15 @@
       <parameters>
         <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendShared/src/main/scala-2.12/-&gt;1badfbc29491b8117f36/" />
         <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendShared/src/main/scala/-&gt;79c7c305eafd556c06f6/" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 6" modules="sharedCrossJS">
+      <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/src/main/scala-2.12/-&gt;4c53c354c70fb5ada435/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/src/main/scala/-&gt;bd5d3a90e1c12fa507b5/" />
       </parameters>
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />

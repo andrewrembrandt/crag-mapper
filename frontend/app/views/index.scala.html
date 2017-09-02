@@ -1,7 +1,7 @@
 @(gmapsApiKey: String, initialCrags: String)
 
-@main("Crag Mapper") {
-<h4>Browse the worlds crag databases in an handy visual map format</h4>
+@main("MountainTripper") {
+<h4>Browse the worlds crag databases</h4>
 
 <svg id="svg" style="display:none" />
 
@@ -11,8 +11,6 @@
 
 <script src="@routes.Assets.versioned("lib/Snap.svg/snap.svg-min.js")"></script>
 
-<script type="application/json" id="crags">
-@Html(initialCrags)
-</script>
+<script type="application/json" id="crags">@Html(initialCrags)</script>
 
 }

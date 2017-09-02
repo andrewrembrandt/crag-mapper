@@ -3,7 +3,7 @@ lazy val scalaV = "2.12.3"
 lazy val playV = "2.6.3"
 lazy val scalaJsV = "0.9.2"
 
-lazy val cragmapper = (project in file("."))
+lazy val mountainTripper = (project in file("."))
   .aggregate(frontend, frontendBrowser)
 
 
@@ -26,7 +26,7 @@ lazy val frontend = (project in file("frontend"))
     "org.webjars" % "Snap.svg" % "0.3.0",
     specs2 % Test
   )).enablePlugins(PlayScala).
-  dependsOn(frontendSharedJvm)
+  dependsOn(shared)
 
 
 
@@ -44,11 +44,11 @@ lazy val frontendBrowser = (project in file("frontendBrowser"))
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
   jsDependencies += RuntimeDOM
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
-  dependsOn(frontendSharedJs, scalajs_gmaps_212fork)
+  dependsOn(sharedJs, scalajs_gmaps_212fork)
 
 
 
-lazy val frontendShared = (crossProject.crossType(CrossType.Pure) in file("frontendShared")).
+lazy val sharedCross = (crossProject.crossType(CrossType.Pure) in file("shared")).
   settings(
     scalaVersion := scalaV,
     libraryDependencies ++= Seq(
@@ -56,8 +56,8 @@ lazy val frontendShared = (crossProject.crossType(CrossType.Pure) in file("front
       "com.typesafe.play" %%% "play-json" % playV
     )).
   jsConfigure(_ enablePlugins ScalaJSWeb)
-lazy val frontendSharedJvm = frontendShared.jvm
-lazy val frontendSharedJs = frontendShared.js
+lazy val shared = sharedCross.jvm
+lazy val sharedJs = sharedCross.js
 
 
 
