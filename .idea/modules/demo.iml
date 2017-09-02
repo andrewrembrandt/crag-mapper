@@ -24,8 +24,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.2:jar" level="project" />
     <orderEntry type="module" module-name="09e3f0d37fb033c66b4f-root" exported="" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scala-js:scalajs-test-interface_2.12:0.6.19:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-js:scalajs-library_2.12:0.6.19:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-js:scalajs-dom_sjs0.6_2.12:0.9.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-js:scalajs-library_2.12:0.6.19:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scala-js:scalajs-test-interface_2.12:0.6.19:jar" level="project" />
   </component>
 </module>

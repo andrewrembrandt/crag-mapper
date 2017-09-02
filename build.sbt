@@ -12,6 +12,7 @@ lazy val server = (project in file("crag-mapper-server"))
   // triggers scalaJSPipeline when using compile or continuous compilation
   compile in Compile <<= (compile in Compile) dependsOn scalaJSPipeline,
   libraryDependencies ++= Seq(
+    guice,
     "com.vmunier" %% "scalajs-scripts" % "1.1.1",
     "com.typesafe.play" %% "play-json" % "2.6.3",
     "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3" exclude("org.webjars", "jquery"),

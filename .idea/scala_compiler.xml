@@ -10,7 +10,9 @@
     </profile>
     <profile name="SBT 3" modules="client">
       <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/crag-mapper-client/src/main/scala-2.12/-&gt;5f5abc6ccd23e2f4beed/" />
         <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/crag-mapper-client/src/main/scala/-&gt;b4752abb3e47fafa5a81/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/crag-mapper-client/src/main/java/-&gt;5fe11014fd062c249fa4/" />
       </parameters>
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
