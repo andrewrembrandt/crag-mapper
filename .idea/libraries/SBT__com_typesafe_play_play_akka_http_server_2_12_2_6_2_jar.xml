@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.typesafe.play:play-akka-http-server_2.12:2.6.2:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/play-akka-http-server_2.12/jars/play-akka-http-server_2.12-2.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/play-akka-http-server_2.12/docs/play-akka-http-server_2.12-2.6.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/play-akka-http-server_2.12/srcs/play-akka-http-server_2.12-2.6.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -8,6 +8,10 @@
         <option name="jdk" value="1.8" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps" />
+            <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo" />
+            <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/project" />
+            <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/project" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/crag-mapper-client" />
             <option value="$PROJECT_DIR$/crag-mapper-client/project" />
@@ -23,6 +27,7 @@
         </option>
         <option name="resolveJavadocs" value="true" />
         <option name="resolveSbtClassifiers" value="true" />
+        <option name="sbtVersion" value="0.13.16" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>

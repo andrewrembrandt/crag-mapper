@@ -1,6 +1,8 @@
 
 lazy val scalaV = "2.12.3"
 
+lazy val scalajs_gmaps_212fork = RootProject(uri("https://github.com/cfraz89/scalajs-google-maps.git"))
+
 lazy val server = (project in file("crag-mapper-server"))
   .settings(
   scalaVersion := scalaV,
@@ -10,8 +12,8 @@ lazy val server = (project in file("crag-mapper-server"))
   // triggers scalaJSPipeline when using compile or continuous compilation
   compile in Compile <<= (compile in Compile) dependsOn scalaJSPipeline,
   libraryDependencies ++= Seq(
-    "com.vmunier" %% "scalajs-scripts" % "1.0.0",
-    "com.lihaoyi" %%% "upickle" % "0.4.3",
+    "com.vmunier" %% "scalajs-scripts" % "1.1.1",
+    "com.typesafe.play" %% "play-json" % "2.6.3",
     "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3" exclude("org.webjars", "jquery"),
     "org.webjars" % "Snap.svg" % "0.3.0",
     specs2 % Test
@@ -25,22 +27,27 @@ lazy val client = (project in file("crag-mapper-client"))
   persistLauncher in Test := false,
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.2",
-    "be.doeraene" %%% "scalajs-jquery" % "0.9.0",
-    "com.lihaoyi" %%% "upickle" % "0.4.3",
-    "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT",
+    "be.doeraene" %%% "scalajs-jquery" % "0.9.2",
+    "com.typesafe.play" %%% "play-json" % "2.6.3",
+    //"io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT",
     "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3" exclude("org.webjars", "jquery")
   ),
   jsDependencies +=
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
   jsDependencies += RuntimeDOM
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
-  dependsOn(sharedJs)
+  dependsOn(sharedJs, scalajs_gmaps_212fork)
 
 lazy val root = (project in file("."))
   .aggregate(server, client)
 
 lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared")).
-  settings(scalaVersion := scalaV).
+  settings(
+    scalaVersion := scalaV,
+    libraryDependencies ++= Seq(
+      "com.typesafe.play" %% "play-json" % "2.6.3",
+      "com.typesafe.play" %%% "play-json" % "2.6.3"
+    )).
   jsConfigure(_ enablePlugins ScalaJSWeb)
 
 lazy val sharedJvm = shared.jvm

@@ -4,13 +4,13 @@ package client
 import org.scalajs.dom
 
 import scala.scalajs.js
-import upickle.default._
 import google.maps.Data.Feature
 import google.maps.{LatLng, MarkerImage, Size}
 import org.github.andrewrembrandt.cragmapper.shared.models._
 
 import scala.scalajs.js.Dynamic.{global => g, literal => l, newInstance => jsn}
 import akauppi.scalajs.snapsvg._
+import play.api.libs.json.Json
 
 import scala.scalajs.js.annotation.JSExport
 
@@ -36,7 +36,7 @@ object Main extends js.JSApp {
 
   def initMap() = {
 
-    val crags = read[List[Crag]](dom.document.getElementById("crags").innerHTML)
+    val crags = Json.fromJson[List[Crag]](Json.parse(dom.document.getElementById("crags").innerHTML)).get
 
     val mapCanvas = dom.document.getElementById("map_canvas")
 

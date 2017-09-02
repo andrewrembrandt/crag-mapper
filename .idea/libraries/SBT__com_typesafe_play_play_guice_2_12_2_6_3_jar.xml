@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.typesafe.play:play-guice_2.12:2.6.3:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/play-guice_2.12/jars/play-guice_2.12-2.6.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/play-guice_2.12/docs/play-guice_2.12-2.6.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/play-guice_2.12/srcs/play-guice_2.12-2.6.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,4 +1,4 @@
-@(message: String, apiKey: String, initialCrags: String)
+@(gmapsApiKey: String, initialCrags: String)
 
 @main("Crag Mapper") {
 <h4>Browse the worlds crag databases in an handy visual map format</h4>
@@ -9,7 +9,7 @@
 
 <div id="map_canvas"></div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=@apiKey"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=@gmapsApiKey"></script>
 
 <script src="@routes.Assets.versioned("lib/Snap.svg/snap.svg-min.js")"></script>
 

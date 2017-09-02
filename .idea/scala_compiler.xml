@@ -10,12 +10,10 @@
     </profile>
     <profile name="SBT 3" modules="client">
       <parameters>
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/crag-mapper-client/src/main/scala-2.11/-&gt;f8a73b716cbd417c26de/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/crag-mapper-client/src/main/scala/-&gt;b09a7737c05624122c57/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/crag-mapper-client/src/main/java/-&gt;00c04cec2a097e6a2547/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/crag-mapper-client/src/main/scala/-&gt;b4752abb3e47fafa5a81/" />
       </parameters>
       <plugins>
-        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/jars/scalajs-compiler_2.11.8-0.6.13.jar" />
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
       </plugins>
     </profile>
     <profile name="SBT 4" modules="server">
@@ -28,14 +26,19 @@
     </profile>
     <profile name="SBT 5" modules="sharedJS">
       <parameters>
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/shared/.js/src/main/scala-2.11/-&gt;be15b337494b00e6c830/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/shared/.js/src/main/scala/-&gt;1fe12232e5f432e02149/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/shared/.js/src/main/java/-&gt;e337051fa9bb4ac7e5e8/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/shared/src/main/scala-2.11/-&gt;044ed07ba25c0f7de960/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrew/IdeaProjects/crag-mapper/shared/src/main/scala/-&gt;238ebd2367a85465c490/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/.js/src/main/scala-2.12/-&gt;f68903cf127f6d90de00/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/.js/src/main/scala/-&gt;b3f69bd8a53b9bc0dd85/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/.js/src/main/java/-&gt;8b23e16e0763c848fd47/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/src/main/scala-2.12/-&gt;4c53c354c70fb5ada435/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/src/main/scala/-&gt;bd5d3a90e1c12fa507b5/" />
       </parameters>
       <plugins>
-        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/jars/scalajs-compiler_2.11.8-0.6.13.jar" />
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 6" modules="09e3f0d37fb033c66b4f-root,demo">
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.2/jars/scalajs-compiler_2.12.2-0.6.19.jar" />
       </plugins>
     </profile>
   </component>
