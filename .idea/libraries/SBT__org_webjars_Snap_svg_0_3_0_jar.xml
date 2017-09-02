@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="SBT: org.webjars:Snap.svg:0.3.0:jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.webjars/Snap.svg/jars/Snap.svg-0.3.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
