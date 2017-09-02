@@ -1,8 +1,7 @@
 
-lazy val scalaV = "2.12.2"
+lazy val scalaV = "2.12.3"
 
 lazy val server = (project in file("crag-mapper-server"))
-  .settings(viewSettings: _*)
   .settings(
   scalaVersion := scalaV,
   scalaJSProjects := Seq(client),
@@ -20,13 +19,12 @@ lazy val server = (project in file("crag-mapper-server"))
   dependsOn(sharedJvm)
 
 lazy val client = (project in file("crag-mapper-client"))
-  .settings(viewSettings: _*)
   .settings(
   scalaVersion := scalaV,
   persistLauncher := true,
   persistLauncher in Test := false,
   libraryDependencies ++= Seq(
-    "org.scala-js" %%% "scalajs-dom" % "0.9.1",
+    "org.scala-js" %%% "scalajs-dom" % "0.9.2",
     "be.doeraene" %%% "scalajs-jquery" % "0.9.0",
     "com.lihaoyi" %%% "upickle" % "0.4.3",
     "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT",
@@ -39,7 +37,6 @@ lazy val client = (project in file("crag-mapper-client"))
   dependsOn(sharedJs)
 
 lazy val root = (project in file("."))
-  .settings(viewSettings: _*)
   .aggregate(server, client)
 
 lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared")).
@@ -55,6 +52,6 @@ resolvers in ThisBuild += Resolver.sonatypeRepo("snapshots")
 // loads the server project at sbt startup
 onLoad in Global := (Command.process("project server", _: State)) compose (onLoad in Global).value
 
-libraryDependencies ++= Seq(
-  "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3"
-)
+//libraryDependencies ++= Seq(
+//  "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3"
+//)
