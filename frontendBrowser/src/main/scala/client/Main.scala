@@ -6,18 +6,20 @@ import org.scalajs.dom
 import scala.scalajs.js
 import google.maps.Data.Feature
 import google.maps.{LatLng, MarkerImage, Size}
-import org.github.andrewrembrandt.cragmapper.shared.models._
 
 import scala.scalajs.js.Dynamic.{global => g, literal => l, newInstance => jsn}
 import akauppi.scalajs.snapsvg._
 import play.api.libs.json.Json
 
+import shared.models._
+
 import scala.scalajs.js.annotation.JSExport
 
 object Main extends js.JSApp {
   def main(): Unit = {
-    initMap()
-    initSvg()
+    dom.window.alert("Test")
+    //initMap()
+    //initSvg()
   }
 
   val tmpSvg: SnapPaper = Snap("#svg")

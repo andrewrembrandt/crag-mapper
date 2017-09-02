@@ -8,13 +8,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_browser.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_browser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_browser-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_browser-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_shared-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_shared-sources.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJS.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJS-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJVM.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJVM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJVM-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJVM-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendBrowser.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendBrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendBrowser-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendBrowser-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendShared-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendShared-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendSharedJS.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendSharedJS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendSharedJS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendSharedJS-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendSharedJVM.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendSharedJVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontendSharedJVM-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontendSharedJVM-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
     </modules>

@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="incrementalityType" value="SBT" />
-    <profile name="SBT 1" modules="crag-mapper,sharedJVM,cragmapper,frontend_sharedJVM" />
+    <profile name="SBT 1" modules="crag-mapper,sharedJVM,frontend_sharedJVM,cragmapper,frontendSharedJVM" />
+    <profile name="SBT 10" modules="frontendBrowser">
+      <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/scala-2.12/-&gt;843e213ea692d1f0407b/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/scala/-&gt;82e946df5d5fcbef8b47/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/java/-&gt;ac5192de78cbfe77a223/" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
+      </plugins>
+    </profile>
     <profile name="SBT 2" modules="cragmapperclient">
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/jars/scalajs-compiler_2.11.8-0.6.13.jar" />
@@ -60,6 +70,15 @@
         <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontend_shared/.js/src/main/java/-&gt;faf3d56170077a266c6f/" />
         <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontend_shared/src/main/scala-2.12/-&gt;93de1227b3ae945bd14c/" />
         <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontend_shared/src/main/scala/-&gt;a28285970f486361ef51/" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 9" modules="frontendSharedJS">
+      <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendShared/src/main/scala-2.12/-&gt;1badfbc29491b8117f36/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendShared/src/main/scala/-&gt;79c7c305eafd556c06f6/" />
       </parameters>
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
