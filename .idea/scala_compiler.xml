@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <option name="incrementalityType" value="SBT" />
+    <profile name="SBT 1" modules="cragmapper,frontendSharedJVM" />
+    <profile name="SBT 2" modules="root,demo">
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.2/jars/scalajs-compiler_2.12.2-0.6.19.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 3" modules="frontend">
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <parameters>
+        <parameter value="-encoding" />
+        <parameter value="utf8" />
+      </parameters>
+    </profile>
+    <profile name="SBT 4" modules="frontendBrowser">
+      <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/scala-2.12/-&gt;843e213ea692d1f0407b/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/scala/-&gt;82e946df5d5fcbef8b47/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/java/-&gt;ac5192de78cbfe77a223/" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 5" modules="frontendSharedJS">
+      <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendShared/src/main/scala-2.12/-&gt;1badfbc29491b8117f36/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendShared/src/main/scala/-&gt;79c7c305eafd556c06f6/" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>
