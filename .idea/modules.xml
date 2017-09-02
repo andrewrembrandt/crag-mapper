@@ -3,20 +3,20 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/09e3f0d37fb033c66b4f-root.iml" filepath="$PROJECT_DIR$/.idea/modules/09e3f0d37fb033c66b4f-root.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client-build.iml" filepath="$PROJECT_DIR$/.idea/modules/client-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crag-mapper-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/crag-mapper-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cragmapper.iml" filepath="$PROJECT_DIR$/.idea/modules/cragmapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cragmapper-build.iml" filepath="$PROJECT_DIR$/.idea/modules/cragmapper-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_browser.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_browser-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_browser-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_shared-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_shared-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJS.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJS-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJVM.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend_sharedJVM-build.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend_sharedJVM-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalajs-google-maps-root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalajs-google-maps-root-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server-build.iml" filepath="$PROJECT_DIR$/.idea/modules/server-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJS.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJS-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJVM.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJVM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sharedJVM-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sharedJVM-build.iml" />
     </modules>
   </component>
 </project>

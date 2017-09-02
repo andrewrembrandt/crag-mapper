@@ -13,16 +13,16 @@
             <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/project" />
             <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/project" />
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/crag-mapper-client" />
-            <option value="$PROJECT_DIR$/crag-mapper-client/project" />
-            <option value="$PROJECT_DIR$/crag-mapper-server" />
-            <option value="$PROJECT_DIR$/crag-mapper-server/project" />
+            <option value="$PROJECT_DIR$/frontend" />
+            <option value="$PROJECT_DIR$/frontend/project" />
+            <option value="$PROJECT_DIR$/frontend_browser" />
+            <option value="$PROJECT_DIR$/frontend_browser/project" />
+            <option value="$PROJECT_DIR$/frontend_shared" />
+            <option value="$PROJECT_DIR$/frontend_shared/.js" />
+            <option value="$PROJECT_DIR$/frontend_shared/.js/project" />
+            <option value="$PROJECT_DIR$/frontend_shared/.jvm" />
+            <option value="$PROJECT_DIR$/frontend_shared/.jvm/project" />
             <option value="$PROJECT_DIR$/project" />
-            <option value="$PROJECT_DIR$/shared" />
-            <option value="$PROJECT_DIR$/shared/.js" />
-            <option value="$PROJECT_DIR$/shared/.js/project" />
-            <option value="$PROJECT_DIR$/shared/.jvm" />
-            <option value="$PROJECT_DIR$/shared/.jvm/project" />
           </set>
         </option>
         <option name="resolveJavadocs" value="true" />
