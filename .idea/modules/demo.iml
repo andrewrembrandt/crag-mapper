@@ -17,15 +17,14 @@
       <sourceFolder url="file:///home/andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/target/scala-2.12/resource_managed/main" type="java-resource" />
       <sourceFolder url="file:///home/andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file:///home/andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/target/scala-2.12/resource_managed/test" type="java-test-resource" />
-      <excludeFolder url="file:///home/andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/target" />
       <excludeFolder url="file:///home/andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/target/streams" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="root" exported="" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.2:jar" level="project" />
-    <orderEntry type="module" module-name="09e3f0d37fb033c66b4f-root" exported="" />
-    <orderEntry type="library" name="SBT: org.scala-js:scalajs-dom_sjs0.6_2.12:0.9.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-js:scalajs-library_2.12:0.6.19:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.scala-js:scalajs-test-interface_2.12:0.6.19:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-js:scalajs-library_2.12:0.6.19:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-js:scalajs-dom_sjs0.6_2.12:0.9.3:jar" level="project" />
   </component>
 </module>

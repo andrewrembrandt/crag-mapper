@@ -3,9 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/net.sourceforge.cssparser/cssparser/jars/cssparser-0.9.23.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/net.sourceforge.cssparser/cssparser/docs/cssparser-0.9.23-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/net.sourceforge.cssparser/cssparser/srcs/cssparser-0.9.23-sources.jar!/" />
     </SOURCES>

@@ -13,9 +13,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.12.2-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar!/" />
     </SOURCES>

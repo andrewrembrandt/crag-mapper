@@ -3,9 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.atteo.classindex/classindex/jars/classindex-3.4.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.atteo.classindex/classindex/docs/classindex-3.4-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/org.atteo.classindex/classindex/srcs/classindex-3.4-sources.jar!/" />
     </SOURCES>

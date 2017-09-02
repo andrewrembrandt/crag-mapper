@@ -3,9 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.6.3.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/build-link/docs/build-link-2.6.3-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/com.typesafe.play/build-link/srcs/build-link-2.6.3-sources.jar!/" />
     </SOURCES>

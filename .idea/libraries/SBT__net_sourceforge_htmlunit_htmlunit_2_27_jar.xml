@@ -3,9 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/net.sourceforge.htmlunit/htmlunit/jars/htmlunit-2.27.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/net.sourceforge.htmlunit/htmlunit/docs/htmlunit-2.27-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../../andrew/.ivy2/cache/net.sourceforge.htmlunit/htmlunit/srcs/htmlunit-2.27-sources.jar!/" />
     </SOURCES>

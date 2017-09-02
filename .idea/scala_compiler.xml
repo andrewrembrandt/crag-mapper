@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="incrementalityType" value="SBT" />
-    <profile name="SBT 1" modules="crag-mapper,root,sharedJVM,cragmapper,frontend_sharedJVM" />
+    <profile name="SBT 1" modules="crag-mapper,sharedJVM,cragmapper,frontend_sharedJVM" />
     <profile name="SBT 2" modules="cragmapperclient">
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.8/jars/scalajs-compiler_2.11.8-0.6.13.jar" />
@@ -38,7 +38,7 @@
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
       </plugins>
     </profile>
-    <profile name="SBT 6" modules="09e3f0d37fb033c66b4f-root,demo">
+    <profile name="SBT 6" modules="09e3f0d37fb033c66b4f-root,root,demo">
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.2/jars/scalajs-compiler_2.12.2-0.6.19.jar" />
       </plugins>

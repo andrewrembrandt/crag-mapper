@@ -31,7 +31,7 @@ lazy val frontend_browser = (project in file("frontend_browser"))
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.2",
     "be.doeraene" %%% "scalajs-jquery" % "0.9.2",
-    "com.typesafe.play" %%% "play-json" % "2.6.3",
+    "com.typesafe.play" %%% "play-json" % "2.6.3"
   ),
   jsDependencies +=
     "org.webjars" % "jquery" % "2.1.4" / "2.1.4/jquery.js",
@@ -56,14 +56,7 @@ lazy val frontend_shared = (crossProject.crossType(CrossType.Pure) in file("fron
 lazy val sharedJvm = frontend_shared.jvm
 lazy val sharedJs = frontend_shared.js
 
-//resolvers in ThisBuild += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 resolvers in ThisBuild += Resolver.sonatypeRepo("snapshots")
 
 // loads the server project at sbt startup
 onLoad in Global := (Command.process("project frontend", _: State)) compose (onLoad in Global).value
-
-libraryDependencies ++= Seq(
-  "com.adrianhurt" %% "play-bootstrap" % "1.2-P26-B3"
-)
-
-routesGenerator in ThisBuild := InjectedRoutesGenerator
