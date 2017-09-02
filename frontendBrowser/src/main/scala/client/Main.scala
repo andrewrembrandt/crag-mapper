@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation.JSExport
 
 object Main extends js.JSApp {
   def main(): Unit = {
-    dom.window.alert("Test")
-    //initMap()
-    //initSvg()
+    initMap()
+    initSvg()
   }
 
   val tmpSvg: SnapPaper = Snap("#svg")
