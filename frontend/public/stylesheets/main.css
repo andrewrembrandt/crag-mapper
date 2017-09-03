@@ -8,10 +8,7 @@ body {
 	padding-top: 60px;
 }
 
-#amap_canvas {
-    height:80%;
-}
-
+/* TODO: Move div container from main.html into pages */
 .container {
 	max-width: 100vw;
 	width: 100vw;

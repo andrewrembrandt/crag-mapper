@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/demo/project" />
             <option value="$PROJECT_DIR$/../../../../andrew/.sbt/0.13/staging/09e3f0d37fb033c66b4f/scalajs-google-maps/project" />
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aggregateWeather" />
+            <option value="$PROJECT_DIR$/aggregateWeather/project" />
             <option value="$PROJECT_DIR$/frontend" />
             <option value="$PROJECT_DIR$/frontend/project" />
             <option value="$PROJECT_DIR$/frontendBrowser" />
