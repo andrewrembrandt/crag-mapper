@@ -18,9 +18,7 @@
     </profile>
     <profile name="SBT 4" modules="frontendBrowser">
       <parameters>
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/scala-2.12/-&gt;843e213ea692d1f0407b/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/scala/-&gt;82e946df5d5fcbef8b47/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/frontendBrowser/src/main/java/-&gt;ac5192de78cbfe77a223/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/mountain-tripper/frontendBrowser/src/main/scala/-&gt;ffd5801eb8ca4861e35d/" />
       </parameters>
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />
@@ -37,8 +35,7 @@
     </profile>
     <profile name="SBT 6" modules="sharedCrossJS">
       <parameters>
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/src/main/scala-2.12/-&gt;4c53c354c70fb5ada435/" />
-        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/crag-mapper/shared/src/main/scala/-&gt;bd5d3a90e1c12fa507b5/" />
+        <parameter value="-P:scalajs:mapSourceURI:file:/home/andrewh/source/personal/mountain-tripper/shared/src/main/scala/-&gt;f251ebf2372cc9fee114/" />
       </parameters>
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.3/jars/scalajs-compiler_2.12.3-0.6.19.jar" />

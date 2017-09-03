@@ -1,16 +1,57 @@
-@(title: String)(content: Html)
+@(title: String, tab: String = "")(content: Html)
 
 <!DOCTYPE html>
 
 <html>
   <head>
     <title>@title</title>
+      <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("lib/bootstrap/css/bootstrap.min.css")">
     <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("lib/bootstrap/css/bootstrap.min.css")">
-  </head>
-  <body>
-   @content
-   @scalajs.html.scripts("frontendBrowser", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
-  </body>
+  <body tab="@tab">
+   <div class="navbar navbar-default navbar-fixed-top">
+       <div class="container">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+               <a class="navbar-brand @("active".when(tab == "index"))" href="@routes.Application.index">Mountain-Tripper</a>
+               <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+           </div>
+           <div class="navbar-collapse collapse" id="navbar-main">
+               <ul class="nav navbar-nav">
+                   <li class="dropdown @("active".when(Seq("vertical", "horizontal", "inline", "mixed").contains(tab)))">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">TBD <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                       <li@if(tab == "vertical"){ class="active"}><a href="@routes.Application.index">Vertical</a></li>
+                       <li@if(tab == "horizontal"){ class="active"}><a href="@routes.Application.index">Horizontal</a></li>
+                       <li@if(tab == "inline"){ class="active"}><a href="@routes.Application.index">Inline</a></li>
+                       <li@if(tab == "mixed"){ class="active"}><a href="@routes.Application.index">Mix styles</a></li>
+                   </ul>
+                   </li>
+                   <li@if(tab == "map"){ class="active"}><a class="versioned" href="@routes.Application.mapBrowser">Activity Map</a></li>
+                   <li@if(tab == "weather"){ class="active"}><a href="@routes.Application.weather">Weather</a></li>
+                   <li@if(tab == "docs"){ class="active"}><a href="@routes.Application.index">Search Trips</a></li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                   <li class="dropdown play-version"><a>My Account</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+
+   <div class="container">
+       @content
+   </div>
+
+   <div class="footer">
+       <div class="container">
+           <p>Designed and developed by <a href="https://github.com/andrewrembrandt" target="_blank">Andrew Rembrandt</a></p>
+           <p>© 2017 Andrew Rembrandt (andrewrembrandt)</p>
+       </div>
+   </div>
+   </body>
 </html>

@@ -1,16 +1,6 @@
-@(gmapsApiKey: String, initialCrags: String)
+@()
 
-@main("MountainTripper") {
-<h4>Browse the worlds crag databases</h4>
-
-<svg id="svg" style="display:none" />
-
-<div id="map_canvas"></div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=@gmapsApiKey"></script>
-
-<script src="@routes.Assets.versioned("lib/Snap.svg/snap.svg-min.js")"></script>
-
-<script type="application/json" id="crags">@Html(initialCrags)</script>
+@main("MountainTripper", "index") {
+<h4>Introductory info and sport/trip summaries...</h4>
 
 }

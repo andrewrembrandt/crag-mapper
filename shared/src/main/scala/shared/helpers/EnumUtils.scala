@@ -1,4 +1,3 @@
-package org.github.andrewrembrandt.cragmapper
 package shared.helpers
 
 import play.api.libs.json._

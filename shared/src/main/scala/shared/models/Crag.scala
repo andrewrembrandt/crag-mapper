@@ -1,9 +1,8 @@
-package org.github.andrewrembrandt.cragmapper
 package shared.models
 
-import org.github.andrewrembrandt.cragmapper.shared.models.ClimbType.ClimbType
 import play.api.libs.json._
 import shared.helpers.EnumUtils
+import shared.models.ClimbType.ClimbType
 
 object ClimbType extends Enumeration {
   type ClimbType = Value

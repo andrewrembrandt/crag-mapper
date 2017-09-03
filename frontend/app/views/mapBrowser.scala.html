@@ -1,0 +1,18 @@
+@(gmapsApiKey: String, initialCrags: String)
+
+@main("MountainTripper", "map") {
+<h4>Browse the worlds crag databases</h4>
+
+<svg id="svg" style="display:none" />
+
+<div class="container-fluid height-width-full" id="map_canvas"></div>
+
+<script type="application/json" id="crags">@Html(initialCrags)</script>
+
+@* //TODO Switch to modular scalajs: https://www.scala-js.org/doc/project/module.html *@
+<script src="@routes.Assets.versioned("lib/Snap.svg/snap.svg-min.js")"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=@gmapsApiKey"></script>
+@scalajs.html.scripts("frontendBrowser", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
+
+
+}

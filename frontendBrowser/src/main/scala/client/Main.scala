@@ -1,5 +1,4 @@
-package org.github.andrewrembrandt.cragmapper
-package client
+package frontend.browser
 
 import org.scalajs.dom
 
