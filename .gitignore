@@ -37,6 +37,7 @@ server.pid
 .worksheet
 .ensime_cache
 
+.idea/
 
 # Intellij
 # User-specific stuff:
