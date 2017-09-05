@@ -3,10 +3,9 @@ package aggregateweather
 import akka.actor.ActorSystem
 import akka.kafka.ProducerSettings
 import akka.kafka.scaladsl.Producer
-import akka.serialization.ByteArraySerializer
 import akka.stream.scaladsl.Source
-import com.fasterxml.jackson.databind.ser.std.StringSerializer
 import org.apache.kafka.clients.producer.ProducerRecord
+import org.apache.kafka.common.serialization.{ ByteArraySerializer, StringSerializer }
 
 object AggregateWeatherApp extends App {
   implicit val system = ActorSystem("aggregateweather")
